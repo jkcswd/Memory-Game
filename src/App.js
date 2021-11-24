@@ -60,8 +60,7 @@ const App = () => {
     <div className="App">
       <header>
         Nature Memory Game
-        <div> Score:{score}/High Score:{highScore}</div>
-
+        <div className="score"> Score:{score}/High Score:{highScore}</div>
       </header>
       <main>
         <div className="card-container">
