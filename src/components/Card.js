@@ -8,7 +8,7 @@ const Card = (props) => {
       className="Card" 
     > 
       <img 
-        src={props.imageURl} 
+        src={process.env.PUBLIC_URL + props.imageURl} 
         alt={props.cardName}
         onClick={(e) => {props.shuffleArray(); props.compareCard(e);}}    
         data-name={props.cardName} // Use data attribute to access from click event.
