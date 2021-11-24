@@ -11,11 +11,11 @@ const App = () => {
     'Lake',
     'Ocean',
     'Mangrove',
-    'Coral Reef',
-    'Hot Springs',
+    'Coral-Reef',
+    'Hot-Springs',
     'Volcano',
     'Savanna',
-    'Rain Forest',
+    'Rain-Forest',
     'River'
   ])
   const [alreadySelectedArray, setAlreadySelectedArray] = useState([]) // To compare against card clicked.
@@ -60,7 +60,7 @@ const App = () => {
     <div className="App">
       <header>
         Nature Memory Game
-        <div className="score"> Score:{score}/High Score:{highScore}</div>
+        <div className="score"> Score:{score}/ High Score:{highScore}</div>
       </header>
       <main>
         <div className="card-container">
@@ -70,6 +70,7 @@ const App = () => {
                 cardName={element} 
                 shuffleArray={shuffleArray}
                 compareCard={compareCard}
+                imageURl={`/images/${element}.jpg`}
               />
             )
           })}
