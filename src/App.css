@@ -4,8 +4,11 @@
 
 header {
   height: 15%;
-
   font-size: 50px;
+  padding: 10px;
+
+  background-color: rgb(34, 33, 33);
+  color: whitesmoke;
 }
 main {
   height: 80%;
@@ -15,15 +18,26 @@ main {
   justify-content: center;
 }
 footer {
-  height: 5%;
+  height: 1%;
+  padding: 20px;
   text-align: center;
+
+  background-color: rgb(34, 33, 33);
+  color: whitesmoke;
 }
 
 .card-container {
   border: 1px solid black;
-  height: 80%;
-  width: 80%;
+  height: 100%;
+  width: 100%;
 
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+}
+
+.score {
+  font-size: 20px;
+
+  margin: 20px 0 0 20px;
 }
