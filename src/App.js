@@ -1,5 +1,7 @@
-import './App.css';
 import React, { useState } from 'react';
+
+import './App.css';
+import Card from './components/Card';
 
 const App = () => {
   const [memoryArray, setMemoryArray] = useState([
@@ -16,6 +18,7 @@ const App = () => {
     'Rain Forest',
     'River'
   ])
+  const [selectedArray, setSelectedArray] = useState([])
   const [score, setScore] = useState(0)
   const [highScore, setHighScore] = useState(0)
 
@@ -34,11 +37,24 @@ const App = () => {
     return array;
   }
 
+  const shuffleArray = () => {
+    setMemoryArray([...shuffle(memoryArray)]) // Spread to trigger rerender as React does not recognize state change.
+  }
+
   return (
     <div className="App">
       <header>Nature Memory Game</header>
       <main>
-        <div className="card-container"></div>
+        <div className="card-container">
+          {memoryArray.map(element => {
+            return (
+            <Card 
+              cardName={element}  
+              shuffleArray={shuffleArray}
+            />
+            )
+          })}
+        </div>
       </main>
       <footer>Made by James Spencer</footer>
     </div>
